@@ -5,7 +5,11 @@ import net.minestom.server.MinecraftServer;
 import net.minestom.server.entity.Player;
 import net.minestom.server.event.GlobalEventHandler;
 import net.minestom.server.event.player.PlayerLoginEvent;
+import net.minestom.server.extras.PlacementRules;
+import net.minestom.server.extras.optifine.OptifineSupport;
 import net.minestom.server.instance.*;
+import net.minestom.server.instance.block.BlockManager;
+import net.minestom.server.instance.block.rule.vanilla.RedstonePlacementRule;
 import net.minestom.server.utils.Position;
 
 public class TemplateServer {
@@ -19,6 +23,9 @@ public class TemplateServer {
         InstanceContainer instanceContainer = instanceManager.createInstanceContainer();
         // Set the ChunkGenerator
         instanceContainer.setChunkGenerator(new StoneGenerator());
+
+        OptifineSupport.enable();
+        PlacementRules.init();
 
         // Add an event callback to specify the spawning instance (and the spawn position)
         GlobalEventHandler globalEventHandler = MinecraftServer.getGlobalEventHandler();
