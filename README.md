@@ -1,3 +1,3 @@
-# Minestom Template
+# Minestom Demo
 
-Represents a basic Minestom server useful as a base for creating your own server implementations.
+A demo server for showcasing Minestom features.

@@ -13,10 +13,11 @@ minestom {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io/' }
 }
 
 dependencies {
-
+//    implementation 'com.github.ReWrite-Media:MineScript:7800b9e5e3'
 }
 
 jar {
